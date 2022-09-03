@@ -14,3 +14,7 @@ Um sistema de gerenciamento de vendas e estoque para comércios
   - Sistema de login em que cada comércio consegue acessar e gerenciar sua loja de forma independente
   - Lidar de armazenar o fluxo de caixa
   - Diferenciar usuários de caixa distintos
+
+## Tecnologias
+ - Backend: Python utilizando MongoDB para gerenciamento e versionamento do banco de dados
+ - Frontend: Angular
