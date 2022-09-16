@@ -48,3 +48,14 @@ Um sistema de gerenciamento de vendas e estoque para comércios
 ## História 4: Eu como usuário de caixa, gostaria de saber o total da compra após escanear X ítens.
 - Adição do preço de produtos ao banco de dados [Lucas]
 - Interface de display da compra final [Luiz]
+
+#
+
+# Backlog do produto
+## Eu como administrador da loja, quero ver quanto cada um dos caixas vendeu.
+## Eu como administrador da loja, quero criar novos usuários.
+## Eu como gerenciador de estoque, gostaria de ver o estoque atual.
+## Eu como gerenciador de estoque, gostaria de receber um aviso quando produtos abaixam de um certo número.
+## Eu como usuário do caixa, quero usar um escaneador para pegar o ID do produto.
+## Eu como usuário do caixa ou gerenciador de estoque, quero pesquisar por um produto.
+## Eu como usuário do caixa, ...
