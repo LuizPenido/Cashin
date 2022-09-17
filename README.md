@@ -58,4 +58,4 @@ Um sistema de gerenciamento de vendas e estoque para comércios
 ## Eu como gerenciador de estoque, gostaria de receber um aviso quando produtos abaixam de um certo número.
 ## Eu como usuário do caixa, quero usar um escaneador para pegar o ID do produto.
 ## Eu como usuário do caixa ou gerenciador de estoque, quero pesquisar por um produto.
-## Eu como usuário do caixa, ...
+## Eu como usuário do caixa, quero ter shortcuts no teclado para exercer minha função mais rapidamente
