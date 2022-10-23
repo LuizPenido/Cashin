@@ -56,7 +56,7 @@ export class ProductRegistrationComponent implements OnInit {
       }
 
       this.loading = true;
-      this.inventoryService.register({id: product.id, nome: product.name, preco: product.price, quantidade: product.quantity})
+      this.inventoryService.register(product)
           .pipe(first())
           .subscribe({
               next: (response) => {

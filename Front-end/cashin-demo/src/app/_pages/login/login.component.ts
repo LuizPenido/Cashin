@@ -51,18 +51,9 @@ export class LoginComponent implements OnInit {
                     this.router.navigateByUrl('/');
                 },
                 error: erro => {
-                    this.message = erro
-                    console.log(erro)
+                    this.message = 'Usuário ou senha inválidos';
                     this.loading = false;
-                },
-            });
-
-        this.loginService.getUserAccess()
-            .pipe(first())
-            .subscribe(response => {
-                    let getNivelAcesso = (response: any) => { return response.nivelPermissao }
-                    localStorage.setItem('access',getNivelAcesso(response))
                 }
-            );
+            });
     }
 }

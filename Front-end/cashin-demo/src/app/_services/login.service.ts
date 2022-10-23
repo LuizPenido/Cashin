@@ -42,6 +42,7 @@ export class LoginService {
             .pipe(map(user => {
                 // store jwt token in local storage to keep user logged in between page refreshes
                 localStorage.setItem('token', user.token);
+                localStorage.setItem('access',user.nivelDeAcesso);
                 //localStorage.setItem('current_user', JSON.stringify(user.name));
                 this.userSubject.next(user);
 

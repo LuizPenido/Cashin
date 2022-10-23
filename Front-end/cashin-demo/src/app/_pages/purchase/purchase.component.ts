@@ -17,6 +17,7 @@ export class PurchaseComponent implements OnInit {
   product_list: any;
   parent_item_list: any;
   total_cost: any;
+  message: any;
   
   constructor(
       private formBuilder: FormBuilder,
@@ -29,9 +30,10 @@ export class PurchaseComponent implements OnInit {
           quantity: ['', Validators.required],
       });
 
-      this.product_list = []
-      this.parent_item_list = []
+      this.product_list = [];
+      this.parent_item_list = [];
       this.total_cost = -1;
+      this.message = '';
   }
 
   // convenience getter for easy access to form fields
@@ -60,6 +62,8 @@ export class PurchaseComponent implements OnInit {
 
   addNewItem(product: any, requested_quantity: number): void {
     console.log('Add new item')
+
+    this.message = '';
     
     let {id, nome, preco, quantidade} = product;
     let total_price_number = requested_quantity * preco;
@@ -85,6 +89,13 @@ export class PurchaseComponent implements OnInit {
           return (total_cost_number.toFixed(2)).replace('.',',');
         }
         this.total_cost = getCost(response);
+        if (this.total_cost == '-1,00') {
+          this.message = 'Compra inválida!';
+        }
+        else {
+          this.message = 'Valor total: R$ ' + this.total_cost;
+        }
+        console.log(this.message)
       }
   );
   }

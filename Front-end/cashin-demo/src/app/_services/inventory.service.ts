@@ -82,9 +82,9 @@ export class InventoryService {
     this.subject.next({ product: product, update: 'add' });
   }
 
-  updateProductsRemove(product: Object) {
+  updateProductsRemove(product: any) {
     console.log("RemoveProducts called")
-    this.subject.next({ product: product, update: 'remove' });
+    this.subject.next({ product: product.produto, update: 'remove' });
   }
 
   getProductsUpdate(): Observable<any> {

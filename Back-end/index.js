@@ -125,14 +125,22 @@ app.put('/produtos', validarToken, (req, res) => {
             valorTotal = 0
             produtos = []
             req.body.forEach(produtoCompra => {
-                const produtoBancoDeDados = results.find((produto) => produto.id == produtoCompra.id)
+                const produtoBancoDeDados = results.find((produto) => produto.id == produtoCompra.id);
+                
+                janalista = produtoBancoDeDados.quantidade;             
+                produtos.forEach(produto => {
+                    if (produto.id == produtoCompra.id){
+                            janalista = produto.quantidade;                       
+                        }
+                });
+                
                 valorTotal += produtoCompra.quantidade * produtoBancoDeDados.preco
-                if(produtoBancoDeDados.quantidade < produtoCompra.quantidade) {
+                if(janalista < produtoCompra.quantidade) {
                     compraValida = false;
                 }else{
                     produtos.push({
                         id: produtoBancoDeDados.id,
-                        quantidade: produtoBancoDeDados.quantidade - produtoCompra.quantidade
+                        quantidade: janalista - produtoCompra.quantidade
                     })
                 }
             });
