@@ -43,7 +43,8 @@ app.post('/login', (req, res) => {
                 jwt.sign({userData}, 'chaveSecreta', 
                 (err, token) => {
                     res.json({
-                        token,
+                        token: token,
+                        nivelDeAcesso: userData.nivelDeAcesso
                     });
                 })
             }
