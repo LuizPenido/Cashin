@@ -1,0 +1,18 @@
+<div class="card" style="height: 22rem;">
+    <h4 class="card-header">Itens da compra</h4>
+    <div class="card-body" style="overflow: scroll">   
+      <div class="container">
+        <div class="row" *ngFor="let item of item_list;">
+          <div class="col-sm">
+            {{item.name}}
+          </div>
+          <div class="col-sm-3">
+            Quant.: {{item.requested_quantity}}
+          </div>
+          <div class="col-sm-4">
+            Total: R$ {{item.total_price}}
+          </div>
+        </div>
+      </div>
+    </div>
+</div>

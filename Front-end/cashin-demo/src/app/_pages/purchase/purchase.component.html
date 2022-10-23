@@ -1,0 +1,53 @@
+<br>
+<div class="container">
+    <div class="row justify-content-around">
+
+        <div class="col-sm-7">
+            <div class="row-sm-7 justify-content-center">
+                <app-item-list [item_list]="parent_item_list"></app-item-list>
+            </div>
+            <br>
+
+            <div class="row-sm-7 justify-content-center">
+                <form [formGroup]="form" (ngSubmit)="onSubmit()">
+                    <div class="input-group mb-3">
+                      <input type="text" class="form-control" placeholder="ID" aria-label="product id" aria-describedby="button-addon2" formControlName="id"/>
+                      <input type="text" class="form-control" placeholder="Quantidade" aria-label="product quantity" aria-describedby="button-addon2" formControlName="quantity"/>
+                      <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Escanear</button>
+                      </div>
+                    </div>
+                </form>
+            </div>
+
+            <br>
+            <br>
+
+            <div class="row-sm-7 justify-content-center">
+
+              <div class="col" style="height: 50px;">
+                <button type="button" class="btn btn-outline-secondary btn-lg" style="float: lefit; vertical-align: middle;" (click)="endPurcharse()">Finalizar</button>
+                <span style="float: right; line-height: 50px; vertical-align: middle;" *ngIf="total_cost != -1">Valor total: R$ {{total_cost}}</span>
+              </div>
+
+            </div>
+        </div>
+
+        <div class="col">
+
+          <div class="row-sm-7 justify-content-center">
+            <app-product-details></app-product-details>
+          </div>
+
+          <br>
+
+          <div class="row-sm-7 justify-content-center">
+            <div class="col justify-content-around">
+              <!-- <span>placeholder</span> -->
+            </div>
+          </div>
+
+        </div>
+
+    </div>
+</div>

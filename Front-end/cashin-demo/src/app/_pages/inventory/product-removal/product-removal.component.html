@@ -1,0 +1,11 @@
+<div class="card">
+    <h4 class="card-header">Remover estoque</h4>
+    <div class="card-body">
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <input type="number" placeholder="Insira um ID de produto" id="productID" formControlName="id" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['id'].errors }" />
+            </div>
+            <button type="submit" class="btn btn-outline-secondary">Remover</button>
+        </form>
+    </div>
+  </div>

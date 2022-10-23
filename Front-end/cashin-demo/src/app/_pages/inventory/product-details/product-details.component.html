@@ -1,0 +1,21 @@
+<div class="card">
+    <div class="card-body">
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Insira um ID de produto" aria-label="product id" aria-describedby="button-addon2" formControlName="id"/>
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Pesquisar</button>
+              </div>
+            </div>
+        </form>
+
+        <div>
+          <ul class="list-group">
+            <li class="list-group-item">ID: <span class="text-secondary">{{valid_product ? current_product.id : ""}}</span> </li>
+            <li class="list-group-item">Nome: <span class="text-secondary">{{valid_product ? current_product.name : ""}}</span> </li>
+            <li class="list-group-item">Preço: <span class="text-secondary">{{valid_product ? "R$ " + current_product.price : ""}}</span> </li>
+            <li class="list-group-item">Quantidade em estoque: <span class="text-secondary">{{valid_product ? current_product.quantity : ""}}</span> </li>
+          </ul>
+        </div>
+    </div>
+  </div>
