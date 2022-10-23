@@ -1,0 +1,67 @@
+Banco de Dados
+Configuração inicial:
+
+CREATE TABLE produtos(
+    id int NOT NULL AUTO_INCREMENT,
+    nome varchar(255),
+    preco double,
+    quantidade int,
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE usuarios(
+    id int NOT NULL AUTO_INCREMENT,
+    nivelDeAcesso varchar(5),
+    nome varchar(255) UNIQUE,
+    senha varchar(50),
+    PRIMARY KEY (id)
+);
+
+INSERT INTO produtos (nome, preco, quantidade)
+VALUES ("Cerveja importada 330ml", 12.4, 100);
+
+INSERT INTO produtos (nome, preco, quantidade)
+VALUES ("Cerveja nacional 500ml", 6.0, 100);
+
+INSERT INTO produtos (nome, preco, quantidade)
+VALUES ("Garrafa de vinho", 40.0, 100);
+
+INSERT INTO produtos (nome, preco, quantidade)
+VALUES ("Água 1.5 litros", 3.2, 100);
+
+INSERT INTO produtos (nome, preco, quantidade)
+VALUES ("Alface", 3.4, 100);
+
+INSERT INTO produtos (nome, preco, quantidade)
+VALUES ("Queijo fresco 1kg", 42.0, 100);
+
+INSERT INTO produtos (nome, preco, quantidade)
+VALUES ("Dúzia de ovos", 9.6, 100);
+
+INSERT INTO produtos (nome, preco, quantidade)
+VALUES ("Arroz 5kg", 25.6, 100);
+
+INSERT INTO produtos (nome, preco, quantidade)
+VALUES ("Leite Itambé 1 litro", 5.1, 100);
+
+INSERT INTO produtos (nome, preco, quantidade)
+VALUES ("Vacina Pfizer", 0.1, 100); 
+
+INSERT INTO usuarios (nivelDeAcesso, nome, senha)
+VALUES ("admin", "Luiz", "admin123");
+
+INSERT INTO usuarios (nivelDeAcesso, nome, senha)
+VALUES ("admin", "Kael", "admin123");
+
+INSERT INTO usuarios (nivelDeAcesso, nome, senha)
+VALUES ("admin", "Lucas", "admin123");
+
+INSERT INTO usuarios (nivelDeAcesso, nome, senha)
+VALUES ("admin", "Isabel", "admin123");
+
+INSERT INTO usuarios (nivelDeAcesso, nome, senha)
+VALUES ("user", "Bolsonaro", "2022");
+
+INSERT INTO usuarios (nivelDeAcesso, nome, senha)
+VALUES ("user", "Lula", "2022");
+

@@ -3,6 +3,20 @@ const jwt = require('jsonwebtoken')
 
 const app = express()
 
+const mysql = require('mysql2');
+const connection = mysql.createConnection({
+  host     : 'localhost',
+  port     : 3306,
+  user     : 'root',
+  password : 'senhaprojeto123',
+  database : 'cashin'
+});
+
+connection.connect((err) => {
+  if(err) return console.log(err);
+  console.log('Banco de dados conectado com sucesso! 🏦🎲');
+})
+
 const bodyParser = require('body-parser')
 app.use(bodyParser.json())
 
